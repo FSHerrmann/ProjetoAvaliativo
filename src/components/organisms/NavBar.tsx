@@ -7,25 +7,53 @@ export default function NavBar() {
   const { logout } = useUser();
   const navigate = useNavigate();
 
+  const baseLinkStyle: React.CSSProperties = {
+    marginRight: 16,
+    textDecoration: 'none',
+    color: '#0070f3'
+  };
+  const activeLinkStyle: React.CSSProperties = {
+    fontWeight: 'bold'
+  };
+
   const handleLogout = () => {
     logout();
     navigate('/');
   };
 
-  const linkStyle = { marginRight: 16, textDecoration: 'none', color: '#0070f3' };
-  const activeStyle = { fontWeight: 'bold' };
-
   return (
-    <nav style={{ padding: '10px 20px', borderBottom: '1px solid #ccc' }}>
-      <NavLink to="/dashboard" style={linkStyle} activeStyle={activeStyle}>
+    <nav style={{ display: 'flex', alignItems: 'center', padding: '10px 20px', borderBottom: '1px solid #ccc', background: '#fff' }}>
+      <NavLink
+        to="/dashboard"
+        style={({ isActive }) =>
+          isActive
+            ? { ...baseLinkStyle, ...activeLinkStyle }
+            : baseLinkStyle
+        }
+      >
         Dashboard
       </NavLink>
-      <NavLink to="/locais" style={linkStyle} activeStyle={activeStyle}>
+
+      <NavLink
+        to="/locais"
+        style={({ isActive }) =>
+          isActive
+            ? { ...baseLinkStyle, ...activeLinkStyle }
+            : baseLinkStyle
+        }
+      >
         Locais de Coleta
       </NavLink>
+
       <button
         onClick={handleLogout}
-        style={{ float: 'right', background: 'none', border: 'none', color: '#0070f3', cursor: 'pointer' }}
+        style={{
+          marginLeft: 'auto',
+          background: 'none',
+          border: 'none',
+          color: '#0070f3',
+          cursor: 'pointer'
+        }}
       >
         Sair
       </button>
