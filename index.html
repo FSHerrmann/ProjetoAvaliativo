@@ -1,13 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../../styles.css" />
+  <title>Projeto Avaliativo 1 – Plataforma de Gerenciamento de Resíduos</title>
+</head>
+<body class="week-page">
+  <div class="week-content">
+    <h1>Projeto Avaliativo 1 – Plataforma de Gerenciamento de Resíduos</h1>
+
+    <hr />
+
+    <h2>Overview</h2>
+    <p>
+      Esta plataforma permite o <strong>gerenciamento de resíduos</strong> e o <strong>cadastro de pontos de coleta</strong>, facilitando a localização de locais que aceitam diversos tipos de materiais recicláveis. O sistema conta com autenticação de usuários, integração com a API ViaCEP para endereço, e persistência de dados via <code>localStorage</code>.
+    </p>
+
+    <hr />
+
+    <h2>Funcionalidades</h2>
+    <ul>
+      <li>Cadastro e login de usuários com dados pessoais e endereço</li>
+      <li>Gestão completa dos pontos de coleta (criar, editar, excluir)</li>
+      <li>Endereçamento automático via ViaCEP pelo CEP informado</li>
+      <li>Seleção dos tipos de resíduos aceitos em cada local</li>
+      <li>Painel com estatísticas de usuários e pontos cadastrados</li>
+      <li>Dados salvos localmente no navegador do usuário</li>
+    </ul>
+
+    <hr />
+
+    <h2>Tecnologias Utilizadas</h2>
+    <ul>
+      <li>React + TypeScript</li>
+      <li>Vite</li>
+      <li>Context API</li>
+      <li>localStorage</li>
+      <li>ViaCEP API</li>
+      <li>Material-UI (opcional)</li>
+    </ul>
+
+    <hr />
+
+    <h2>Como executar localmente</h2>
+    <pre>
+npm install
+npm run dev
+    </pre>
+
+    <hr />
+
+    <h2>Acesse o Projeto</h2>
+    <ul>
+      <li>🌎 <a href="https://projeto-avaliativo-delta.vercel.app/" target="_blank" rel="noopener">Versão Online (Vercel)</a></li>
+      <li>📁 <a href="https://github.com/FSHerrmann/ProjetoAvaliativo" target="_blank" rel="noopener">Repositório no GitHub</a></li>
+    </ul>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../../script.js"></script>
+</body>
 </html>
